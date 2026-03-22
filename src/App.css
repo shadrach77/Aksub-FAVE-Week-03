@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  background-color: #f2f2f2;
+}
+
+.centering-container {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+
+.main-container {
+  width: 951px;
+  margin: 71px;
+  padding: 68px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  background-color: #ffffff;
+}

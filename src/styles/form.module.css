@@ -1,0 +1,56 @@
+.form {
+  display: flex;
+  gap: 21px;
+  align-items: flex-end;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  font-size: 16px;
+}
+
+.input {
+  padding: 16px 24px;
+  font-size: 16px;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  height: 57px;
+}
+
+.input::placeholder {
+  color: #c9c9c9;
+}
+
+.formGroupTodo input {
+  width: 366.76251220703125px;
+}
+
+.formGroupDate input {
+  width: 286.47125244140625px;
+}
+
+.formGroupDate {
+  position: relative;
+}
+
+.formGroupDate img {
+  position: absolute;
+  right: 24px;
+  top: 47px;
+}
+
+.button {
+  border: none;
+  padding: 16px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #0c51ff;
+  background-color: #0c51ff;
+  color: white;
+  height: 57px;
+}

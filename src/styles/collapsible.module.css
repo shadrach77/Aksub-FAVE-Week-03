@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 27px;
+}
+
+.header > img {
+  position: relative;
+  top: 15px;
+  left: 12px;
+  width: 17px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.mainHeading {
+  display: flex;
+  gap: 24px;
+  font-size: 16px;
+}
+
+.mainHeading p {
+  background-color: #f6f6f6;
+  padding: 8px;
+}
