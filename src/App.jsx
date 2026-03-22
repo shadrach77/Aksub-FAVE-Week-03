@@ -2,6 +2,7 @@ import "./App.css";
 import Heading from "./components/Heading";
 import Form from "./components/Form";
 import Collapsible from "./components/Collapsible";
+import Todo from "./components/Todo";
 
 function App() {
   return (
@@ -9,7 +10,10 @@ function App() {
       <main className="main-container">
         <Heading />
         <Form />
-        <Collapsible />
+        <Collapsible>
+          <Todo />
+          <Todo />
+        </Collapsible>
       </main>
     </div>
   );

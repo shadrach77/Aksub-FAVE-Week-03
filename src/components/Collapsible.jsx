@@ -1,8 +1,11 @@
 import styles from "../styles/collapsible.module.css";
 import CollapsibleIcon from "../assets/collapsible-icon.svg";
 import CalendarIcon from "../assets/calendar-icon.svg";
+import { useState } from "react";
 
-export default function Collapsible() {
+export default function Collapsible({ children }) {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
   return (
     <header className={styles.header}>
       <img src={CollapsibleIcon} alt="collapsible-icon" />
@@ -13,7 +16,7 @@ export default function Collapsible() {
           <h1>Today</h1>
           <p>4</p>
         </div>
-        <p>hi</p>
+        <div className={styles.childrenContainer}>{children}</div>
       </main>
     </header>
   );

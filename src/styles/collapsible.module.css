@@ -17,15 +17,28 @@
   display: flex;
   flex-direction: column;
   gap: 23px;
+  width: 100%;
 }
 
 .mainHeading {
   display: flex;
-  gap: 24px;
+  gap: 8px;
+  align-items: center;
+}
+
+.mainHeading h1 {
   font-size: 16px;
+  font-weight: 500;
 }
 
 .mainHeading p {
   background-color: #f6f6f6;
   padding: 8px;
+  border-radius: 4px;
+}
+
+.childrenContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
 }

@@ -1,0 +1,32 @@
+.todoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 58px;
+  width: 100%;
+  padding: 21px;
+  border-radius: 6px;
+  font-size: 16px;
+  background: #ebebeb;
+}
+
+.leftSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 21px;
+  max-width: 650px;
+}
+
+.checkbox {
+  width: 19px;
+  height: 19px;
+  accent-color: #000000;
+}
+
+.label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
