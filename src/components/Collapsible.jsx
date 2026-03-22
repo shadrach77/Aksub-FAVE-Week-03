@@ -8,7 +8,13 @@ export default function Collapsible({ children }) {
 
   return (
     <header className={styles.header}>
-      <img src={CollapsibleIcon} alt="collapsible-icon" />
+      <img
+        src={CollapsibleIcon}
+        alt="collapsible-icon"
+        onClick={() => {
+          setIsCollapsed((curr) => !curr);
+        }}
+      />
 
       <main className={styles.main}>
         <div className={styles.mainHeading}>
@@ -16,7 +22,11 @@ export default function Collapsible({ children }) {
           <h1>Today</h1>
           <p>4</p>
         </div>
-        <div className={styles.childrenContainer}>{children}</div>
+        <div
+          className={`${styles.childrenContainer} ${isCollapsed && styles.childrenContainerCollapsed}`}
+        >
+          {children}
+        </div>
       </main>
     </header>
   );

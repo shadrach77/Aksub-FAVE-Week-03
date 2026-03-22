@@ -14,6 +14,10 @@ function App() {
           <Todo />
           <Todo />
         </Collapsible>
+        <Collapsible>
+          <Todo />
+          <Todo />
+        </Collapsible>
       </main>
     </div>
   );
