@@ -1,7 +1,25 @@
 import styles from "../styles/form.module.css";
 import CalendarIcon from "../assets/calendar-icon.svg";
+import { useState } from "react";
 
-export default function Form() {
+export default function Form({ onAddTodos }) {
+  const [todoName, setTodoName] = useState("");
+  const [todoDate, setTodoDate] = useState("");
+
+  function handleSubmission(e) {
+    e.preventDefault();
+
+    onAddTodos({
+      id: crypto.randomUUID(),
+      name: todoName,
+      date: todoDate,
+      checked: false,
+    });
+
+    setTodoName("");
+    setTodoDate("");
+  }
+
   return (
     <form action="" className={styles.form}>
       <div className={`${styles.formGroup} ${styles.formGroupTodo}`}>
@@ -14,6 +32,8 @@ export default function Form() {
           id="todo"
           placeholder="Study for mid exams..."
           className={styles.input}
+          value={todoName}
+          onChange={(e) => setTodoName(e.target.value)}
         />
       </div>
 
@@ -27,11 +47,17 @@ export default function Form() {
           id="date"
           placeholder="Monday, 25th April 2025"
           className={styles.input}
+          value={todoDate}
+          onChange={(e) => setTodoDate(e.target.value)}
         />
         <img src={CalendarIcon} alt="calendar-icon" />
       </div>
 
-      <button type="submit" className={styles.button}>
+      <button
+        type="submit"
+        className={styles.button}
+        onClick={handleSubmission}
+      >
         Create
       </button>
     </form>

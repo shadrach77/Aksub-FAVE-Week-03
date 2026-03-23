@@ -1,27 +1,31 @@
 import styles from "../styles/todo.module.css";
 import Label from "./Label";
 
-export default function Todo() {
+export default function Todo({ todo, onToggleCheck }) {
   return (
-    <div className={styles.todoContainer}>
+    <div
+      className={`${styles.todoContainer} ${todo.checked && styles.todoContainerChecked}`}
+    >
       <div className={styles.leftSection}>
         <input
           type="checkbox"
           id="todo"
           name="todo"
-          value="checked"
+          checked={todo.checked}
           className={styles.checkbox}
+          onChange={() => {
+            onToggleCheck(todo.id);
+          }}
         />
-        <label for="todo" className={styles.label}>
-          {" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-          accusantium atque similique, dicta laborum quas odit tempore.
-          Exercitationem blanditiis inventore, fugit quae sequi, error iusto
-          dicta incidunt cumque rem aspernatur?
+        <label
+          for="todo"
+          className={`${styles.label} ${todo.checked && styles.labelChecked}`}
+        >
+          {todo.name}
         </label>
       </div>
       <div className={styles.rightSection}>
-        <Label />
+        <Label date={todo.date} />
       </div>
     </div>
   );
